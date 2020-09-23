@@ -9,7 +9,7 @@ images:
 tags:
   - hugo
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> -->
 ## hugo折腾过程
 
 ### 记录博客从hexo迁移至hugo所遇到的问题

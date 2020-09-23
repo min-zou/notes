@@ -40,7 +40,7 @@ disableHugoGeneratorInject = false
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
-
+  math = true
   # Subtitle for home
   homeSubtitle = "Don't worry , Be happy!"
 
@@ -115,7 +115,7 @@ disableHugoGeneratorInject = false
   [[menu.main]]
     identifier = "icon-about"
     # name       = "about"
-    url        = "/about"
+    url        = "/about/about_me"
   [[menu.main]]
     identifier = "icon-ref"
     # name       = "Refrence"
