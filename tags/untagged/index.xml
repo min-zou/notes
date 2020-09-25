@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on Hello World</title>
+    <link>https://min-zou.github.io/notes/tags/untagged/</link>
+    <description>Recent content in untagged on Hello World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 15 May 2020 14:35:55 +0800</lastBuildDate><atom:link href="https://min-zou.github.io/notes/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tx2</title>
+      <link>https://min-zou.github.io/notes/notes/posts/tx2/</link>
+      <pubDate>Fri, 15 May 2020 14:35:55 +0800</pubDate>
+      
+      <guid>https://min-zou.github.io/notes/notes/posts/tx2/</guid>
+      <description>Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.
+Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.
+On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.
+Examples {{ .Title | markdownify }}
+Code Academic supports a Markdown extension for highlighting code syntax.</description>
+    </item>
+    
+  </channel>
+</rss>
