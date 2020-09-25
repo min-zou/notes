@@ -4,6 +4,7 @@ author:
 title: "Camera"
 date: 2020-05-25T10:49:39+08:00
 draft: false
+math: true
 toc: false
 images:
 tags:

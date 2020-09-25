@@ -4,7 +4,9 @@ author:
 title: "Tx2"
 date: 2020-05-15T14:35:55+08:00
 draft: false
-toc: false
+toc: true
+math: true
+diagram: true
 images:
 tags:
   - untagged
@@ -17,6 +19,7 @@ Academic is designed to give technical content creators a seamless experience. Y
 On this page, you'll find some examples of the types of technical content that can be rendered with Academic.
 
 ## Examples
+{{ .Title | markdownify }}
 
 ### Code
 
@@ -63,14 +66,10 @@ $$\gamma_{n} = \frac{
 {\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 ```
 
-\begin{bmatrix} 
-    \frac{x}{r}&\frac{y}{r}&\frac{1}{r}
-\end{bmatrix}
-renders as
 
 $$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 
-Example **inline math** `$\nabla F(\mathbf{x}_{n})$` renders as $\nabla F(\mathbf{x}_{n})$.
+Example **inline math** `$\nabla F(\mathbf{x}_{n})$` renders as $\nabla F(\mathbf{x}_{n-1})$.
 
 Example **multi-line math** using the `\\\\` math linebreak:
 
@@ -81,8 +80,10 @@ $$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\\\
 
 renders as
 
-$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\\\
-1-p_0^* & \text {if }k=0.\end{cases}$$
+$$
+f(k,p_{0}^*) = \begin{cases} p_0^* &\text{if }k=1, \\\\
+				1-p_0^* & \text {if }k=0.\end{cases}
+$$
 
 ### Diagrams
 
@@ -90,7 +91,7 @@ Academic supports a Markdown extension for diagrams. You can enable this feature
 
 An example **flowchart**:
 
-    ```mermaid
+    ```mermaid1
     graph TD
     A[Hard] -->|Text| B(Round)
     B --> C{Decision}
@@ -108,9 +109,10 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 
+
 An example **sequence diagram**:
 
-    ```mermaid
+    ```mermaid1
     sequenceDiagram
     Alice->>John: Hello John, how are you?
     loop Healthcheck
@@ -123,6 +125,7 @@ An example **sequence diagram**:
     ```
 
 renders as
+
 
 ```mermaid
 sequenceDiagram
@@ -138,7 +141,7 @@ Bob-->>John: Jolly good!
 
 An example **Gantt diagram**:
 
-    ```mermaid
+    ```mermaid1
     gantt
     section Section
     Completed :done,    des1, 2014-01-06,2014-01-08
@@ -149,22 +152,12 @@ An example **Gantt diagram**:
     Parallel 4   :         des6, after des4, 1d
     ```
 
-renders as
 
-```mermaid
-gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-```
+
 
 An example **class diagram**:
 
-    ```mermaid
+    ```mermaid1
     classDiagram
     Class01 <|-- AveryLongClass : Cool
     <<interface>> Class01
@@ -188,7 +181,7 @@ renders as
 ```mermaid
 classDiagram
 Class01 <|-- AveryLongClass : Cool
-<<interface>> Class01
+Class01
 Class09 --> C2 : Where am i?
 Class09 --* C3
 Class09 --|> Class07
@@ -198,7 +191,6 @@ Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
 class Class10 {
-  <<service>>
   int id
   size()
 }
@@ -206,7 +198,7 @@ class Class10 {
 
 An example **state diagram**:
 
-    ```mermaid
+    ```mermaid1
     stateDiagram
     [*] --> Still
     Still --> [*]

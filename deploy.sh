@@ -1,6 +1,6 @@
 rm -rf public
 
-find -type d -empty -exec rm -rf {} \;
+# find -type d -empty -exec rm -rf {} \;
 hugo --theme=hello-friend-ng --baseUrl="https://min-zou.github.io/notes"
 # hugo --theme=hello-friend-ng --baseUrl="https://www.robot-rex.top"
 # cp CNAME public/

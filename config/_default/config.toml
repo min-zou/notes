@@ -1,3 +1,5 @@
+# [build]
+   # useResourceCacheWhen = "fallback"
 baseurl      = "https://localhost"
 title        = "My Blog"
 languageCode = "en-us"
@@ -36,13 +38,19 @@ disableHugoGeneratorInject = false
 [blackfriday]
   hrefTargetBlank = true
 [params]
+  [icon.pack]
+    ai = false  # Academicons icon pack https://jpswalsh.github.io/academicons/
+
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
-  math = true
+  math = false
+  diagram = true
   # Subtitle for home
   homeSubtitle = "Don't worry , Be happy!"
+  highlight = true
+  highlight_languages = ["r"]  # Add support for highlighting additional languages
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = true
@@ -51,7 +59,7 @@ disableHugoGeneratorInject = false
   description = "My new homepage or blog"
   keywords = "homepage, blog"
   images = [""]
-
+  busuanzi = true
   # Directory name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
 
@@ -111,11 +119,13 @@ disableHugoGeneratorInject = false
     # name       = "Record"
     weight = 20
     pre = "<i class='fa fa-road'></i>"
-    url        = "/posts"
+    url        = "/notes"
   [[menu.main]]
     identifier = "icon-about"
     # name       = "about"
-    url        = "/about/about_me"
+    url        = "about/"
+    weight = 20
+
   [[menu.main]]
     identifier = "icon-ref"
     # name       = "Refrence"
@@ -124,3 +134,5 @@ disableHugoGeneratorInject = false
     identifier = "icon-fun"
     # name       = "Fun"
     url        = "/extra"
+# [build]
+#   useResourceCacheWhen = "never"
